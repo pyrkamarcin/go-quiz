@@ -26,11 +26,11 @@ func main() {
 	e.Use(middleware.Recover())
 
 	e.POST("login", routes.Login(db))
-	e.POST("users", routes.Register(db))
+	e.POST("register", routes.Register(db))
 
-	e.GET("in", routes.Accessible)
+	e.GET("open", routes.Accessible)
 
-	r := e.Group("/res")
+	r := e.Group("/close")
 	r.Use(middleware.JWTWithConfig(middleware.JWTConfig{
 		SigningKey:  []byte("secret"),
 		AuthScheme:  "Bearer",
