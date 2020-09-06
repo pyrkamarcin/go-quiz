@@ -1,9 +1,10 @@
 package routes
 
 import (
+	"net/http"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo"
-	"net/http"
 )
 
 func Restricted(c echo.Context) error {

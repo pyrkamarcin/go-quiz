@@ -1,12 +1,13 @@
 package routes
 
 import (
+	"net/http"
+
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
 	"github.com/pyrkamarcin/go-quiz/src/helpers"
 	"github.com/pyrkamarcin/go-quiz/src/models"
 	"github.com/pyrkamarcin/go-quiz/src/requests"
-	"net/http"
 )
 
 func Register(db *gorm.DB) func(ctx echo.Context) error {

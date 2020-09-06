@@ -1,14 +1,15 @@
 package routes
 
 import (
+	"net/http"
+	"time"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/jinzhu/gorm"
 	"github.com/labstack/echo"
 	"github.com/pyrkamarcin/go-quiz/src/helpers"
 	"github.com/pyrkamarcin/go-quiz/src/models"
 	"github.com/pyrkamarcin/go-quiz/src/requests"
-	"net/http"
-	"time"
 )
 
 func Login(db *gorm.DB) func(ctx echo.Context) error {

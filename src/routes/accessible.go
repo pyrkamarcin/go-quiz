@@ -1,8 +1,9 @@
 package routes
 
 import (
-	"github.com/labstack/echo"
 	"net/http"
+
+	"github.com/labstack/echo"
 )
 
 func Accessible(c echo.Context) error {
